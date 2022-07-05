@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+
+.btn {
+    cursor: pointer;
+    padding: 5px 15px;
+    background-color: #E02401;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+
+.border-none {
+    border: none;
+}
+
+.btn-outline {
+    background-color: white;
+    border: 1px solid #E02401;
+    color: #E02401;
+}
+
+.margin-top-4 {
+    margin-top: 4rem;
+}
+
+.margin-top-8 {
+    margin-top: 8rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* Start of Navbar */
+.navbar {
+    padding: 20px 0;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 25px;
+}
+
+.container h1 span {
+    color: #E02401;
+}
+
+.container ul {
+    display: flex;
+}
+
+.container ul li {
+    margin-right: 15px;
+}
+
+.container ul li a {
+    color: #0A1329;
+    font-size: 18px;
+}
+
+.container ul li a:hover {
+    color: #E02401;
+}
+
+/* End of Navbar */
+
+/* Start of Hero */
+.hero {
+    padding: 50px 0;
+}
+
+.hero .grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text h1 {
+    font-size: 45px;
+}
+
+.hero-text p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 1.5rem;
+    color: #0A1329;
+    opacity: 55%;
+}
+
+.hero-text .btn-hero {
+    padding: 10px 30px;
+    background-color: #E02401;
+    border-radius: 30px;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.hero .grid img {
+    width: 450px;
+    align-self: flex-end;
+}
+/* End of Hero */
+
+/* Start of Content */
+.content {
+    padding: 100px 0;
+}
+
+.content .grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.content-card {
+    padding: 20px;
+}
+
+.card-number {
+    padding: 10px 20px;
+    background-color: #FFEBA1;
+    display: inline-flex;
+    border-radius: 15px;
+}
+.card-number2 {
+    padding: 10px 20px;
+    background-color: #95DAC1;
+    display: inline-flex;
+    border-radius: 15px;
+}
+.card-number3 {
+    padding: 10px 20px;
+    background-color: #FD6F96;
+    display: inline-flex;
+    border-radius: 15px;
+}
+
+.content-card .first {
+    font-size: 35px;
+    color: #D6AC10;
+}
+.content-card .second {
+    font-size: 35px;
+    color: #00B272;
+}
+.content-card .third {
+    font-size: 35px;
+    color: #DD013D;
+}
+
+.content-card h3 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+
+.urgent-table {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.urgent-table .urgent-title {
+    padding: 5px 15px;
+    background-color: #e02401;
+    color: #faf0fa;
+}
+
+.urgent-table .location {
+    padding: 5px 20px;
+    background-color: rgb(192, 185, 185);
+    color: black;
+}
+
+/* End of Content */
+
+/* Start of Footer */
+.footer {
+    background-color: #FF645A;
+    padding: 30px;
+}
+
+.footer h4 {
+    color: #FAF0FA;
+    text-align: center;
+}
+/* End of Footer */
+
+/* Start Form */
+.form {
+    padding: 50px 0;
+}
+
+.form .grid {
+    text-align: center;
+}
+
+.form h3 {
+    margin-bottom: 50px;
+}
+
+.form form input {
+    margin-bottom: 15px;
+    border: 2px grey solid;
+    padding: 15px 40px;
+    border-radius: 50px;
+}
+
+.form form input:focus {
+    outline: 1px #ff645a solid;
+    border: 1px #ff645a solid;
+}
+
+.form form button {
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: #faf0fa;
+    background-color: #e02401;
+    border: none;
+    cursor: pointer;
+}
+/* end of form */
+
+
+/* Start of Card */
+.card-section {
+    padding: 50px 0;
+}
+
+.card-section .grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    row-gap: 50px;
+}
+
+.card-section .search {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.search input {
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px #e02401 solid;
+    color: #ff645a;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.card-section .card {
+    border: 1px #ff645a solid;
+    padding: 20px;
+}
+
+.card td {
+    padding: 5px;
+}
+/* End of Card */

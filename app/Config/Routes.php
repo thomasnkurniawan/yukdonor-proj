@@ -36,6 +36,27 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/register', 'Register::index');
+$routes->post('/register/valid_register', 'Register::valid_register');
+$routes->post('/login/valid_login', 'Login::valid_login');
+$routes->get('/login', 'Login::index');
+$routes->get('/login', 'Login::index');
+$routes->get('/pendonor/form', 'Pendonor::form');
+$routes->get('/pendonor/list', 'Pendonor::index');
+$routes->post('/pendonor/save', 'Pendonor::save');
+$routes->get('/urgent/form', 'Urgent::form');
+$routes->get('/urgent/list', 'Urgent::index');
+$routes->post('/urgent/save', 'Urgent::save');
+$routes->get('/post', 'Post::index');
+$routes->get('/post/urgent/delete/(:num)', 'Post::delete_urgent/$1');
+$routes->get('/post/pendonor/delete/(:num)', 'Post::delete_pendonor/$1');
+$routes->get('/post/edit/(:alpha)/(:num)', 'Post::view_edit/$1/$2');
+$routes->post('/post/update/(:alpha)/(:num)', 'Post::update/$1/$2');
+
+
+
+
+
 
 /*
  * --------------------------------------------------------------------

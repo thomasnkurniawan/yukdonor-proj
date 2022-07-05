@@ -41,4 +41,24 @@ class Validation extends BaseConfig
     //--------------------------------------------------------------------
     // Rules
     //--------------------------------------------------------------------
+    public $register = [
+        'email' => 'required|valid_email|is_unique[user.email]|min_length[6]',
+        'password' => 'min_length[8]|alpha_numeric_punct',
+    ];
+        
+    public $register_errors = [
+       'email' => [
+            "required" => "Email wajib diisi",
+            "valid_email" => "Format email salah",
+            "is_unique" => "Email sudah diterdaftar"
+        ],
+        'password' => [
+            'min_length' => 'Password harus terdiri dari 8 kata',
+            'alpha_numeric_punct' => 'Password hanya boleh mengandung angka, huruf, dan karakter yang valid'
+        ],
+       'confirm' => [
+           'matches' => 'Konfirmasi password tidak cocok'
+        ]
+    ];
+       
 }
