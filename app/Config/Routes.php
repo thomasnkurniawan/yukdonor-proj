@@ -48,10 +48,14 @@ $routes->get('/urgent/form', 'Urgent::form');
 $routes->get('/urgent/list', 'Urgent::index');
 $routes->post('/urgent/save', 'Urgent::save');
 $routes->get('/post', 'Post::index');
+$routes->post('/urgent/search', 'Urgent::search');
 $routes->get('/post/urgent/delete/(:num)', 'Post::delete_urgent/$1');
 $routes->get('/post/pendonor/delete/(:num)', 'Post::delete_pendonor/$1');
 $routes->get('/post/edit/(:alpha)/(:num)', 'Post::view_edit/$1/$2');
 $routes->post('/post/update/(:alpha)/(:num)', 'Post::update/$1/$2');
+$routes->post('/post/search', 'Post::search');
+$routes->post('/pendonor/search', 'Pendonor::search');
+
 
 
 

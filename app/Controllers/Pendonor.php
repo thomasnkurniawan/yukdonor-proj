@@ -58,4 +58,23 @@ class Pendonor extends BaseController
         session()->setFlashdata('pendonor', 'Anda berhasil mendaftarkan pendonor!');
         return redirect()->to('/pendonor/list');
     }
+
+    public function search()
+    {
+         //tangkap data dari form 
+        $key = $this->request->getVar('keyword');
+        if ($key) {
+            $data['list'] = $this->pendonorModel->pencarian($key, $this->session->get('salt'));
+        } else {
+            $data['list'] = $this->pendonorModel->where('salt', $this->session->get('salt'))->findAll();
+        }
+        if (count($data['list']) == 0) {
+
+            session()->setFlashdata('notfound', 'Pencarian tidak ditemukan :(');
+        } else {    
+            session()->setFlashdata('notfound', '');
+        }
+
+        return view('pendonor/list-pendonor', $data);
+    }
 }

@@ -8,31 +8,43 @@
 
             <form method="post" action="/pendonor/save">
                 <div>
-                    <input type="text" placeholder="Nama" name="nama">
+                    <input type="text" required placeholder="Nama" name="nama">
                 </div>
                 <div>
-                    <input type="number" placeholder="Umur" name="umur">
+                    <input type="number" required placeholder="Umur" name="umur">
+                </div>
+                <div class="select-container">
+                    <div class="select-label">
+                        <span>Golongan Darah</span>
+                    </div>
+                    <div class="selectWrapper">
+                        <select class="selectBox" name="golongan_darah">
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                        </select>
+                    </div>
                 </div>
                 <div>
-                    <input type="text" placeholder="Golongan Darah" name="golongan_darah">
+                    <input type="text" required placeholder="Provinsi" name="provinsi">
                 </div>
                 <div>
-                    <input type="text" placeholder="Provinsi" name="provinsi">
+                    <input type="text" required placeholder="Kota" name="kota">
                 </div>
                 <div>
-                    <input type="text" placeholder="Kota" name="kota">
+                    <input type="text" required placeholder="Kecamatan" name="kecamatan">
                 </div>
                 <div>
-                    <input type="text" placeholder="Kecamatan" name="kecamatan">
+                    <input type="text" required placeholder="Alamat" name="alamat">
                 </div>
                 <div>
-                    <input type="text" placeholder="Alamat" name="alamat">
+                    <input type="number" required placeholder="Kontak" name="kontak">
                 </div>
                 <div>
-                    <input type="number" placeholder="Kontak" name="kontak">
-                </div>
-                <div>
-                    <input type="text" placeholder="Terakhir Donor Darah" name="terakhir_donor">
+                    <input type="text" required placeholder="Terakhir Donor Darah" name="terakhir_donor">
                 </div>
                 <button type="submit">KIRIM</button>
             </form>

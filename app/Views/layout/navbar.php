@@ -12,6 +12,8 @@
                     <li><a href="/pendonor/form">Form</a></li>
                     <li><a href="/urgent/list">Urgent</a></li>
                     <li><a href="/urgent/form">Form Urgent</a></li>
+                    <li><a href="/post">My Post</a></li>
+
                 </ul>
             </nav>
             <div>

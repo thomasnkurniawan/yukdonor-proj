@@ -10,8 +10,20 @@
                 <div>
                     <input type="text" placeholder="Nama Pasien" name="nama" value="<?= $urgent['nama']; ?>">
                 </div>
-                <div>
-                    <input type="text" placeholder="Golongan Darah" name="golongan_darah" value="<?= $urgent['golongan_darah']; ?>">
+                <div class="select-container">
+                    <div class="select-label">
+                        <span>Golongan Darah</span>
+                    </div>
+                    <div class="selectWrapper">
+                        <select class="selectBox" name="golongan_darah" value="<?= $pendonor['golongan_darah']; ?>">
+                            <option value="A+"<?=$pendonor['golongan_darah'] == 'A+' ? ' selected="selected"' : '';?>>A+</option>
+                            <option value="A-"<?=$pendonor['golongan_darah'] == 'A-' ? ' selected="selected"' : '';?>>A-</option>
+                            <option value="B+"<?=$pendonor['golongan_darah'] == 'B+' ? ' selected="selected"' : '';?>>B+</option>
+                            <option value="B-"<?=$pendonor['golongan_darah'] == 'B-' ? ' selected="selected"' : '';?>>B-</option>
+                            <option value="O+"<?=$pendonor['golongan_darah'] == 'O+' ? ' selected="selected"' : '';?>>O+</option>
+                            <option value="O-"<?=$pendonor['golongan_darah'] == 'O-' ? ' selected="selected"' : '';?>>O-</option>
+                        </select>
+                    </div>
                 </div>
                 <div>
                     <input type="text" placeholder="Provinsi" name="provinsi" value="<?= $urgent['provinsi']; ?>">

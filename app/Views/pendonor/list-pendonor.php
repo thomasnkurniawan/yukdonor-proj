@@ -5,9 +5,23 @@
 <section class="card-section">
         <div class="container">
 
-            <div class="search">
-                <input type="search" placeholder="Cari Kota Terdekat">
+        <div class="search">
+                <form action="/pendonor/search" method="post">
+
+                    <input type="search" name="keyword" id="search_text" placeholder="Cari Kota Terdekat">
+                    <input type="submit" class="btn" style="color: white;" value="Cari" />
+                </form>
             </div>
+
+            <?php 
+                $session = session();
+                $notfound = $session->getFlashdata('notfound');
+            ?>
+              <?php if($notfound){ ?>
+                <div style="text-align: center">
+                    <p style="color:black; align-self: center;"><?php echo $notfound?></p>
+                </div>
+            <?php } ?>
 
             <div class="grid">
             <?php foreach ($list as $pendonor) : ?>

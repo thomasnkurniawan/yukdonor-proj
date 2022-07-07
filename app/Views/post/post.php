@@ -7,14 +7,27 @@
             <?php 
                 $session = session();
                 $message = $session->getFlashdata('message');
+                $notfound = $session->getFlashdata('notfound');
+
             ?>
               <?php if($message){ ?>
                 <p style="color:green"><?php echo $message?></p>
             <?php } ?>
 
             <div class="search">
-                <input type="search" placeholder="Cari Kota Terdekat">
+                <form action="/post/search" method="post">
+
+                    <input type="search" name="keyword" id="search_text" placeholder="Cari Kota Terdekat">
+                    <input type="submit" class="btn" style="color: white;" value="Cari" />
+                </form>
             </div>
+
+            
+            <?php if($notfound){ ?>
+                <div style="text-align: center">
+                    <p style="color:black; align-self: center;"><?php echo $notfound?></p>
+                </div>
+            <?php } ?>
 
             <div class="grid">
             <?php foreach ($urgents as $urgent) : ?>

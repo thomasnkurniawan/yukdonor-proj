@@ -8,25 +8,32 @@
 
             <form method="post" action="/urgent/save">
                 <div>
-                    <input type="text" placeholder="Nama Pasien" name="nama">
+                    <input type="text" placeholder="Nama Pasien" require name="nama">
+                </div>
+                <div class="selectWrapper">
+                        <select class="selectBox" require name="golongan_darah">
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                        </select>
+                    </div>
+                <div>
+                    <input type="text" placeholder="Provinsi" require name="provinsi">
                 </div>
                 <div>
-                    <input type="text" placeholder="Golongan Darah" name="golongan_darah">
+                    <input type="text" placeholder="Kota" require name="kota">
                 </div>
                 <div>
-                    <input type="text" placeholder="Provinsi" name="provinsi">
+                    <input type="text" placeholder="Rumah Sakit" require name="rumah_sakit">
                 </div>
                 <div>
-                    <input type="text" placeholder="Kota" name="kota">
+                    <input type="text" placeholder="Narahubung" require name="narahubung">
                 </div>
                 <div>
-                    <input type="text" placeholder="Rumah Sakit" name="rumah_sakit">
-                </div>
-                <div>
-                    <input type="text" placeholder="Narahubung" name="narahubung">
-                </div>
-                <div>
-                    <input type="number" placeholder="Kontak" name="kontak">
+                    <input type="number" placeholder="Kontak" require name="kontak">
                 </div>
                 <button type="submit">KIRIM</button>
             </form>

@@ -64,6 +64,7 @@ class Post extends BaseController
 
         if ($type == 'pendonor') {
             $dataPendonorUpdate = $this->request->getPost();
+            print_r($dataPendonorUpdate);
 
             $this->pendonorModel->update($id, [
                 "nama" => $dataPendonorUpdate['nama'],
@@ -120,5 +121,27 @@ class Post extends BaseController
         $this->pendonorModel->delete($id);
         $this->session->setFlashdata('message', 'Delete Data Berhasil');
         return redirect()->to('/post');
+    }
+
+
+    public function search()
+    {
+         //tangkap data dari form 
+        $key = $this->request->getVar('keyword');
+        if ($key) {
+            $data['pendonors'] = $this->pendonorModel->pencarian($key, $this->session->get('salt'));
+            $data['urgents'] = $this->urgentModel->pencarian($key, $this->session->get('salt'));
+        } else {
+            $data['urgents'] = $this->urgentModel->where('salt', $this->session->get('salt'))->findAll();
+            $data['pendonors'] = $this->pendonorModel->where('salt', $this->session->get('salt'))->findAll();
+        }
+        if (count($data['pendonors']) == 0 && count($data['urgents']) == 0) {
+
+            session()->setFlashdata('notfound', 'Pencarian tidak ditemukan :(');
+        } else {    
+            session()->setFlashdata('notfound', '');
+        }
+
+        return view('post/post', $data);
     }
 }
