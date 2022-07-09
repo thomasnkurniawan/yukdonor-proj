@@ -1,3 +1,11 @@
+# Project Explain
+## Aplikasi CRUD Sederhana, untuk menampilkan dan menambahkan data pendonor darah menggunakan CodeIgniter v4, sql database
+![image](https://user-images.githubusercontent.com/54229568/178096964-63b1a191-e9ad-4796-bbd0-810e6237d8ea.png)
+![image](https://user-images.githubusercontent.com/54229568/178096974-2e3bd3bb-f6b8-435d-9cee-32ad121bc377.png)
+
+
+
+#Framework Explain
 # CodeIgniter 4 Framework
 
 ## What is CodeIgniter?
